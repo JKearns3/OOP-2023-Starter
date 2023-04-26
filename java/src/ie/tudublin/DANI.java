@@ -22,7 +22,7 @@ public class DANI extends PApplet {
 
 	public void setup() {
 		colorMode(HSB);
-
+		loadFile();
        
 	}
 
@@ -44,6 +44,17 @@ public class DANI extends PApplet {
 
 	public void loadFile()
 	{
+		String[] lines = loadStrings("small.txt"); // array of lines from the txt file
+		String words = " "; //a long string of all the words from the txt file
+		for(String line: lines) //add all the lines to words
+		{
+			words += " " + line;
+		}
+
+		words = words.toLowerCase(); 
+		words = words.replaceAll("[^\\w\\s]", "");
+		
+		String[] allWords = split(words, ' ');		
 		
 	}
 }
