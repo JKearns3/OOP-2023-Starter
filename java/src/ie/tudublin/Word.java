@@ -36,9 +36,21 @@ public class Word {
         answer = word + ": ";
         for(Follow f : follows)
         {
-            answer += f.word + " ";
+            answer += f.toString() + " ";
         } 
         return answer;
+    }
+
+    public boolean findFollow(String str)
+    {
+        for(Follow f : follows)
+        {
+            if(f.word == str)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

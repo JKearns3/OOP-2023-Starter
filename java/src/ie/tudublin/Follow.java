@@ -14,7 +14,7 @@ public class Follow {
     @Override 
     public String toString()
     {
-        return "\nWord: " + word + " count " + count;
+        return word + "(" + count + ")";
     }
 
     public String getWord() {
