@@ -91,9 +91,9 @@ public class DANI extends PApplet {
 
 		for(int i = 0; i <= follows.size() - 1; i++)
 		{
-			for(int j = 1; j <= words.length -1 ; i++)
+			for(int j = 1; j <= words.length -1 ; j++)
 			{
-				if(follows.get(i).getWord() == words[j] )
+				if(follows.get(i).getWord().equals(words[j]) )
 				{
 					Word w = new Word(words[j-1], follows);
 					wordsList.add(w);
